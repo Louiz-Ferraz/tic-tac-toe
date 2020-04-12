@@ -47,14 +47,14 @@ const peca1 = {
     sY: 249,
     w: 73,
     h: 73,
-    x: 33,
-    y: 297,
-    desenha() {
+    //x: 33,
+    //y: 297,
+    desenha(hrztl,vrtcl) {
         contexto.drawImage(
             pecas,
             peca1.sX, peca1.sY,
             peca1.w, peca1.h,
-            peca1.x, peca1.y,
+            hrztl, vrtcl,
             peca1.w, peca1.h,
         );
     }
@@ -66,14 +66,14 @@ const peca2 = {
     sY: 15,
     w: 73,
     h: 73,
-    x: 33,
-    y: 205,
-    desenha() {
+    //x: 33,
+    //y: 205,
+    desenha(hrztl,vrtcl) {
         contexto.drawImage(
             pecas,
             peca2.sX, peca2.sY,
             peca2.w, peca2.h,
-            peca2.x, peca2.y,
+            hrztl, vrtcl,
             peca2.w, peca2.h,
         );
     }
@@ -82,6 +82,7 @@ const peca2 = {
 //
 //Posições
 //
+
 const posicao1 = {
     x: 33,
     y: 114,
@@ -127,17 +128,108 @@ const posicao9 = {
     y: 297,
 }
 
-function click() {
+//
+// Telas
+//
 
-}
+let telaAtiva = {};
+function mudaParaTela(novaTela) {
+    telaAtiva = novaTela;
+};
+
+const Telas = {
+    INICIO: {
+        desenha() {
+            telaBoard.desenha();
+        }
+    },
+    DURANTE1: {
+        desenha() {
+            telaBoard.desenha();
+            cliqueX1 = cliqueX;
+            cliqueY1 = cliqueY;
+            peca1.desenha(cliqueX,cliqueY);
+        }   
+    },
+    DURANTE2: {
+        desenha() {
+            telaBoard.desenha();
+            cliqueX2 = cliqueX;
+            cliqueY2 = cliqueY;
+            peca1.desenha(cliqueX1,cliqueY1);
+            peca2.desenha(cliqueX,cliqueY);
+        }   
+    },
+};
 
 function loop() {
 
-    telaBoard.desenha();
-    peca1.desenha();
-    peca2.desenha();
+    //console.log('teste contador loop');
+
+    //telaBoard.desenha();
+    //peca1.desenha(posicao1.x,posicao1.y);
+    //peca2.desenha(posicao3.x,posicao3.y);
+
+    x = posicao1.x;
+    y = posicao1.y;
+
+    telaAtiva.desenha();
     requestAnimationFrame(loop); //Função que ajuda a desenhar os quadros de forma inteligente
-    
+
 }
 
+var cursorX = 0;
+var cursorY = 0;
+var contadorCliques = 0;
+// Variáveis para impedir repetição dos quadrantes
+var pos1 = 0;
+var pos2 = 0;
+var pos3 = 0;
+var pos4 = 0;
+var pos5 = 0;
+var pos6 = 0;
+var pos7 = 0;
+var pos8 = 0;
+var pos9 = 0;
+
+console.log(`Contador de cliques: ${contadorCliques}`)
+
+function MousePos(event) {
+    cursorX = event.clientX;
+    cursorY = event.clientY;
+    console.log(`x=${cursorX}`);
+    console.log(`y=${cursorY}`);
+
+    if(cursorX >= 137 & cursorX <= 217 & cursorY >= 121 & cursorY <= 200) {
+        if (pos1 == 0) {
+            cliqueX = posicao1.x;
+            cliqueY = posicao1.y;
+            contadorCliques = contadorCliques + 1;
+            mudaParaTela(Telas.DURANTE1);
+            console.log(`A tela ativa é ${telaAtiva}`);
+            console.log(`Contador de cliques: ${contadorCliques}`);
+        }
+        pos1 = 1;
+        console.log(`Contador de cliques: ${contadorCliques}`);
+    };
+
+    if(cursorX >= 229 & cursorX <= 308 & cursorY >= 121 & cursorY <= 200) {
+        if (pos2 == 0) {
+            cliqueX = posicao2.x;
+            cliqueY = posicao2.y;
+            contadorCliques = contadorCliques + 1;
+            mudaParaTela(Telas.DURANTE2);
+            console.log(`A tela ativa é ${telaAtiva}`);
+            console.log(`Contador de cliques: ${contadorCliques}`);
+        }
+        pos2 = 1;
+        console.log(`Contador de cliques: ${contadorCliques}`);
+    };
+
+};
+
+document.addEventListener("click", MousePos);
+
+mudaParaTela(Telas.INICIO);
+console.log(`A tela ativa é ${telaAtiva}`)
 loop();
