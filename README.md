@@ -3,7 +3,7 @@
 
 The idea here is to study and create my first simple game (using JavaScript).
 
-I drew poorly on the readme preview, so made it into comments...
+I drew poorly on the readme preview, so turned it into comments...
 
 
 <!--
