@@ -190,6 +190,57 @@ const Telas = {
     }
 };
 
+//Criação variáveis marcadores das peças (definidos inicialmente como números diferentes para facilitar condicional)
+var marcador_peca1_X1 = 4;
+var marcador_peca1_X2 = 5;
+var marcador_peca1_X3 = 6;
+var marcador_peca1_X4 = 7;
+var marcador_peca1_X5 = 8;
+
+var marcador_peca1_Y1 = 4;
+var marcador_peca1_Y2 = 5;
+var marcador_peca1_Y3 = 6;
+var marcador_peca1_Y4 = 7;
+var marcador_peca1_Y5 = 8;
+
+var marcador_peca2_X1 = 4;
+var marcador_peca2_X2 = 5;
+var marcador_peca2_X3 = 6;
+var marcador_peca2_X4 = 7;
+var marcador_peca2_X5 = 8;
+
+var marcador_peca2_Y1 = 4;
+var marcador_peca2_Y2 = 5;
+var marcador_peca2_Y3 = 6;
+var marcador_peca2_Y4 = 7;
+var marcador_peca2_Y5 = 8;
+
+var marcadord1_peca1_1 = 0;
+var marcadord1_peca1_2 = 0;
+var marcadord1_peca1_3 = 0;
+var marcadord1_peca1_4 = 0;
+var marcadord1_peca1_5 = 0;
+
+var marcadord2_peca1_1 = 0;
+var marcadord2_peca1_2 = 0;
+var marcadord2_peca1_3 = 0;
+var marcadord2_peca1_4 = 0;
+var marcadord2_peca1_5 = 0;
+
+var marcadord1_peca2_1 = 0;
+var marcadord1_peca2_2 = 0;
+var marcadord1_peca2_3 = 0;
+var marcadord1_peca2_4 = 0;
+var marcadord1_peca2_5 = 0;
+
+var marcadord2_peca2_1 = 0;
+var marcadord2_peca2_2 = 0;
+var marcadord2_peca2_3 = 0;
+var marcadord2_peca2_4 = 0;
+var marcadord2_peca2_5 = 0;
+
+
+
 //Help: https://pt.stackoverflow.com/questions/190570/mudar-o-nome-de-uma-variavel-usando-parametros-de-uma-fun%C3%A7%C3%A3o-javascript
 function criarDURANTES(u) {
 
@@ -199,6 +250,10 @@ function criarDURANTES(u) {
                 telaBoard.desenha();
                 cliqueX1 = cliqueX;
                 cliqueY1 = cliqueY;
+                marcador_peca1_X1 = marcadorX;
+                marcador_peca1_Y1 = marcadorY;
+                marcadord1_peca1_1 = marcadord1;
+                marcadord2_peca1_1 = marcadord2;
                 peca1.desenha(cliqueX1,cliqueY1);
                 turnO.desenha();
             }
@@ -212,6 +267,10 @@ function criarDURANTES(u) {
                 telaBoard.desenha();
                 cliqueX2 = cliqueX;
                 cliqueY2 = cliqueY;
+                marcador_peca2_X1 = marcadorX;
+                marcador_peca2_Y1 = marcadorY;
+                marcadord1_peca2_1 = marcadord1;
+                marcadord2_peca2_1 = marcadord2;
                 peca1.desenha(cliqueX1,cliqueY1);
                 peca2.desenha(cliqueX2,cliqueY2);
                 turnX.desenha();
@@ -226,6 +285,10 @@ function criarDURANTES(u) {
                 telaBoard.desenha();
                 cliqueX3 = cliqueX;
                 cliqueY3 = cliqueY;
+                marcador_peca1_X2 = marcadorX;
+                marcador_peca1_Y2 = marcadorY;
+                marcadord1_peca1_2 = marcadord1;
+                marcadord2_peca1_2 = marcadord2;
                 peca1.desenha(cliqueX1,cliqueY1);
                 peca2.desenha(cliqueX2,cliqueY2);
                 peca1.desenha(cliqueX3,cliqueY3);
@@ -241,6 +304,10 @@ function criarDURANTES(u) {
                 telaBoard.desenha();
                 cliqueX4 = cliqueX;
                 cliqueY4 = cliqueY;
+                marcador_peca2_X2 = marcadorX;
+                marcador_peca2_Y2 = marcadorY;
+                marcadord1_peca2_2 = marcadord1;
+                marcadord2_peca2_2 = marcadord2;
                 peca1.desenha(cliqueX1,cliqueY1);
                 peca2.desenha(cliqueX2,cliqueY2);
                 peca1.desenha(cliqueX3,cliqueY3);
@@ -257,6 +324,10 @@ function criarDURANTES(u) {
                 telaBoard.desenha();
                 cliqueX5 = cliqueX;
                 cliqueY5 = cliqueY;
+                marcador_peca1_X3 = marcadorX;
+                marcador_peca1_Y3 = marcadorY;
+                marcadord1_peca1_3 = marcadord1;
+                marcadord2_peca1_3 = marcadord2;
                 peca1.desenha(cliqueX1,cliqueY1);
                 peca2.desenha(cliqueX2,cliqueY2);
                 peca1.desenha(cliqueX3,cliqueY3);
@@ -274,6 +345,10 @@ function criarDURANTES(u) {
                 telaBoard.desenha();
                 cliqueX6 = cliqueX;
                 cliqueY6 = cliqueY;
+                marcador_peca2_X3 = marcadorX;
+                marcador_peca2_Y3 = marcadorY;
+                marcadord1_peca2_3 = marcadord1;
+                marcadord2_peca2_3 = marcadord2;
                 peca1.desenha(cliqueX1,cliqueY1);
                 peca2.desenha(cliqueX2,cliqueY2);
                 peca1.desenha(cliqueX3,cliqueY3);
@@ -292,6 +367,10 @@ function criarDURANTES(u) {
                 telaBoard.desenha();
                 cliqueX7 = cliqueX;
                 cliqueY7 = cliqueY;
+                marcador_peca1_X4 = marcadorX;
+                marcador_peca1_Y4 = marcadorY;
+                marcadord1_peca1_4 = marcadord1;
+                marcadord2_peca1_4 = marcadord2;
                 peca1.desenha(cliqueX1,cliqueY1);
                 peca2.desenha(cliqueX2,cliqueY2);
                 peca1.desenha(cliqueX3,cliqueY3);
@@ -311,6 +390,10 @@ function criarDURANTES(u) {
                 telaBoard.desenha();
                 cliqueX8 = cliqueX;
                 cliqueY8 = cliqueY;
+                marcador_peca2_X4 = marcadorX;
+                marcador_peca2_Y4 = marcadorY;
+                marcadord1_peca2_4 = marcadord1;
+                marcadord2_peca2_4 = marcadord2;
                 peca1.desenha(cliqueX1,cliqueY1);
                 peca2.desenha(cliqueX2,cliqueY2);
                 peca1.desenha(cliqueX3,cliqueY3);
@@ -331,6 +414,10 @@ function criarDURANTES(u) {
                 telaBoard.desenha();
                 cliqueX9 = cliqueX;
                 cliqueY9 = cliqueY;
+                marcador_peca1_X5 = marcadorX;
+                marcador_peca1_Y5 = marcadorY;
+                marcadord1_peca1_5 = marcadord1;
+                marcadord2_peca1_5 = marcadord2;
                 peca1.desenha(cliqueX1,cliqueY1);
                 peca2.desenha(cliqueX2,cliqueY2);
                 peca1.desenha(cliqueX3,cliqueY3);
@@ -344,6 +431,12 @@ function criarDURANTES(u) {
             }   
         };
         mudaParaTela(Telas.DURANTE9);
+        if(contadorCliques == 9) {
+            setTimeout(() => {
+                alert("Empate, vamos de novo!");
+                location.reload();
+            }, 100);
+        }
     }
 }
 
@@ -351,6 +444,7 @@ function loop() {
 
     //console.log('teste contador loop');
 
+    vitoria_dentro_da_vitoria();
     telaAtiva.desenha();
     requestAnimationFrame(loop); //Função que ajuda a desenhar os quadros de forma inteligente
 
@@ -370,26 +464,30 @@ var pos7 = 0;
 var pos8 = 0;
 var pos9 = 0;
 
-console.log(`Contador de cliques: ${contadorCliques}`)
+//console.log(`Contador de cliques: ${contadorCliques}`)
 
 function MousePos(event) {
     cursorX = event.offsetX;
     cursorY = event.offsetY;
-    console.log(`x=${cursorX}`);
-    console.log(`y=${cursorY}`);
+    //console.log(`x=${cursorX}`);
+    //console.log(`y=${cursorY}`);
 
     //Click on position 1
     if(cursorX >= 29 & cursorX <= 109 & cursorY >= 112 & cursorY <= 192) {
         if (pos1 == 0) {
             cliqueX = posicao1.x;
             cliqueY = posicao1.y;
+            marcadorX = 1;
+            marcadorY = 1;
+            marcadord1 = 15;
+            marcadord2 = 0;
             contadorCliques = contadorCliques + 1;
             criarDURANTES(contadorCliques);
-            console.log(`A tela ativa é ${telaAtiva}`);
-            console.log(`Contador de cliques: ${contadorCliques}`);
+            //console.log(`A tela ativa é ${telaAtiva}`);
+            //console.log(`Contador de cliques: ${contadorCliques}`);
         }
         pos1 = 1;
-        console.log(`Contador de cliques: ${contadorCliques}`);
+        //console.log(`Contador de cliques: ${contadorCliques}`);
     };
 
     //Click on position 2
@@ -397,13 +495,17 @@ function MousePos(event) {
         if (pos2 == 0) {
             cliqueX = posicao2.x;
             cliqueY = posicao2.y;
+            marcadorX = 1;
+            marcadorY = 2;
+            marcadord1 = 0;
+            marcadord2 = 0;
             contadorCliques = contadorCliques + 1;
             criarDURANTES(contadorCliques);
-            console.log(`A tela ativa é ${telaAtiva}`);
-            console.log(`Contador de cliques: ${contadorCliques}`);
+            //console.log(`A tela ativa é ${telaAtiva}`);
+            //console.log(`Contador de cliques: ${contadorCliques}`);
         }
         pos2 = 1;
-        console.log(`Contador de cliques: ${contadorCliques}`);
+        //console.log(`Contador de cliques: ${contadorCliques}`);
     };
 
     //Click on position 3
@@ -411,13 +513,17 @@ function MousePos(event) {
         if (pos3 == 0) {
             cliqueX = posicao3.x;
             cliqueY = posicao3.y;
+            marcadorX = 1;
+            marcadorY = 3;
+            marcadord1 = 0;
+            marcadord2 = 15;
             contadorCliques = contadorCliques + 1;
             criarDURANTES(contadorCliques);
-            console.log(`A tela ativa é ${telaAtiva}`);
-            console.log(`Contador de cliques: ${contadorCliques}`);
+            //console.log(`A tela ativa é ${telaAtiva}`);
+            //console.log(`Contador de cliques: ${contadorCliques}`);
         }
         pos3 = 1;
-        console.log(`Contador de cliques: ${contadorCliques}`);
+        //console.log(`Contador de cliques: ${contadorCliques}`);
     };
     
     //Click on position 4
@@ -425,13 +531,17 @@ function MousePos(event) {
         if (pos4 == 0) {
             cliqueX = posicao4.x;
             cliqueY = posicao4.y;
+            marcadorX = 2;
+            marcadorY = 1;
+            marcadord1 = 0;
+            marcadord2 = 0;
             contadorCliques = contadorCliques + 1;
             criarDURANTES(contadorCliques);
-            console.log(`A tela ativa é ${telaAtiva}`);
-            console.log(`Contador de cliques: ${contadorCliques}`);
+            //console.log(`A tela ativa é ${telaAtiva}`);
+            //console.log(`Contador de cliques: ${contadorCliques}`);
         }
         pos4 = 1;
-        console.log(`Contador de cliques: ${contadorCliques}`);
+        //console.log(`Contador de cliques: ${contadorCliques}`);
     };
 
     //Click on position 5
@@ -439,13 +549,17 @@ function MousePos(event) {
         if (pos5 == 0) {
             cliqueX = posicao5.x;
             cliqueY = posicao5.y;
+            marcadorX = 2;
+            marcadorY = 2;
+            marcadord1 = 15;
+            marcadord2 = 15;
             contadorCliques = contadorCliques + 1;
             criarDURANTES(contadorCliques);
-            console.log(`A tela ativa é ${telaAtiva}`);
-            console.log(`Contador de cliques: ${contadorCliques}`);
+            //console.log(`A tela ativa é ${telaAtiva}`);
+            //console.log(`Contador de cliques: ${contadorCliques}`);
         }
         pos5 = 1;
-        console.log(`Contador de cliques: ${contadorCliques}`);
+        //console.log(`Contador de cliques: ${contadorCliques}`);
     };
 
     //Click on position 6
@@ -453,13 +567,17 @@ function MousePos(event) {
         if (pos6 == 0) {
             cliqueX = posicao6.x;
             cliqueY = posicao6.y;
+            marcadorX = 2;
+            marcadorY = 3;
+            marcadord1 = 0;
+            marcadord2 = 0;
             contadorCliques = contadorCliques + 1;
             criarDURANTES(contadorCliques);
-            console.log(`A tela ativa é ${telaAtiva}`);
-            console.log(`Contador de cliques: ${contadorCliques}`);
+            //console.log(`A tela ativa é ${telaAtiva}`);
+            //console.log(`Contador de cliques: ${contadorCliques}`);
         }
         pos6 = 1;
-        console.log(`Contador de cliques: ${contadorCliques}`);
+        //console.log(`Contador de cliques: ${contadorCliques}`);
     };
 
     //Click on position 7
@@ -467,13 +585,17 @@ function MousePos(event) {
         if (pos7 == 0) {
             cliqueX = posicao7.x;
             cliqueY = posicao7.y;
+            marcadorX = 3;
+            marcadorY = 1;
+            marcadord1 = 0;
+            marcadord2 = 15;
             contadorCliques = contadorCliques + 1;
             criarDURANTES(contadorCliques);
-            console.log(`A tela ativa é ${telaAtiva}`);
-            console.log(`Contador de cliques: ${contadorCliques}`);
+            //console.log(`A tela ativa é ${telaAtiva}`);
+            //console.log(`Contador de cliques: ${contadorCliques}`);
         }
         pos7 = 1;
-        console.log(`Contador de cliques: ${contadorCliques}`);
+        //console.log(`Contador de cliques: ${contadorCliques}`);
     };
 
     //Click on position 8
@@ -481,13 +603,17 @@ function MousePos(event) {
         if (pos8 == 0) {
             cliqueX = posicao8.x;
             cliqueY = posicao8.y;
+            marcadorX = 3;
+            marcadorY = 2;
+            marcadord1 = 0;
+            marcadord2 = 0;
             contadorCliques = contadorCliques + 1;
             criarDURANTES(contadorCliques);
-            console.log(`A tela ativa é ${telaAtiva}`);
-            console.log(`Contador de cliques: ${contadorCliques}`);
+            //console.log(`A tela ativa é ${telaAtiva}`);
+            //console.log(`Contador de cliques: ${contadorCliques}`);
         }
         pos8 = 1;
-        console.log(`Contador de cliques: ${contadorCliques}`);
+        //console.log(`Contador de cliques: ${contadorCliques}`);
     };
 
     //Click on position 9
@@ -495,13 +621,17 @@ function MousePos(event) {
         if (pos9 == 0) {
             cliqueX = posicao9.x;
             cliqueY = posicao9.y;
+            marcadorX = 3;
+            marcadorY = 3;
+            marcadord1 = 15;
+            marcadord2 = 0;
             contadorCliques = contadorCliques + 1;
             criarDURANTES(contadorCliques);
-            console.log(`A tela ativa é ${telaAtiva}`);
-            console.log(`Contador de cliques: ${contadorCliques}`);
+            //console.log(`A tela ativa é ${telaAtiva}`);
+            //console.log(`Contador de cliques: ${contadorCliques}`);
         }
         pos9 = 1;
-        console.log(`Contador de cliques: ${contadorCliques}`);
+        //console.log(`Contador de cliques: ${contadorCliques}`);
     };
 
 };
@@ -509,6 +639,80 @@ function MousePos(event) {
 document.addEventListener("click", MousePos);
 
 mudaParaTela(Telas.INICIO);
-console.log(`A tela ativa é ${telaAtiva}`)
-console.log(Telas);
+//console.log(`A tela ativa é ${telaAtiva}`)
+//console.log(Telas);
+
+function vitoria(j1,j2,j3,j4,j5) {
+    
+    if (j1 == j2 & j1 == j3) {
+        return true
+    }
+    if (j1 == j2 & j1 == j4) {
+        return true
+    }
+    if (j1 == j2 & j1 == j5) {
+        return true
+    }
+    if (j1 == j3 & j1 == j4) {
+        return true
+    }
+    if (j1 == j3 & j1 == j5) {
+        return true
+    }
+    if (j1 == j4 & j1 == j5) {
+        return true
+    }
+    if (j2 == j3 & j2 == j4) {
+        return true
+    }
+    if (j2 == j3 & j2 == j5) {
+        return true
+    }
+    if (j2 == j4 & j2 == j5) {
+        return true
+    }
+    if (j3 == j4 & j3 == j5) {
+        return true
+    }
+    return false
+}
+
+function vitoria_diagonal(j1,j2,j3,j4,j5) {
+    if(j1+j2+j3+j4+j5 == 45) {
+        return true
+    }
+    return false
+}
+
+function vitoria_dentro_da_vitoria(){
+    if( vitoria(marcador_peca1_X1,marcador_peca1_X2,marcador_peca1_X3,marcador_peca1_X4,marcador_peca1_X5) ||
+        vitoria(marcador_peca1_Y1,marcador_peca1_Y2,marcador_peca1_Y3,marcador_peca1_Y4,marcador_peca1_Y5)
+    ) {
+        location.reload();
+        alert("Parabéns, o jogador X venceu!")
+    }
+
+    if( vitoria(marcador_peca2_X1,marcador_peca2_X2,marcador_peca2_X3,marcador_peca2_X4,marcador_peca2_X5) ||
+        vitoria(marcador_peca2_Y1,marcador_peca2_Y2,marcador_peca2_Y3,marcador_peca2_Y4,marcador_peca2_Y5)
+    ) {
+        location.reload();
+        alert("Parabéns, o jogador O venceu!")
+    }
+
+    if( vitoria_diagonal(marcadord1_peca1_1,marcadord1_peca1_2,marcadord1_peca1_3,marcadord1_peca1_4,marcadord1_peca1_5) ||
+        vitoria_diagonal(marcadord2_peca1_1,marcadord2_peca1_2,marcadord2_peca1_3,marcadord2_peca1_4,marcadord2_peca1_5)
+    ) {
+        location.reload();
+        alert("Parabéns, o jogador X venceu!")
+    }
+
+    if( vitoria_diagonal(marcadord1_peca2_1,marcadord1_peca2_2,marcadord1_peca2_3,marcadord1_peca2_4,marcadord1_peca2_5) ||
+        vitoria_diagonal(marcadord2_peca2_1,marcadord2_peca2_2,marcadord2_peca2_3,marcadord2_peca2_4,marcadord2_peca2_5)
+    ) {
+        location.reload();
+        alert("Parabéns, o jogador O venceu!")
+    }
+
+}
+
 loop();
